@@ -70,6 +70,7 @@ jobs:
       - name: Run Script
         run: >-
           poetry run python main.py action lang-and-zs-to-paratranz
+          --modpack-path='.temp/modpack'
       - name: Close Issue
         run: gh issue close "${ISSUE_URL}" --comment "Paratranzに自動的に同期されました。"
         env:
