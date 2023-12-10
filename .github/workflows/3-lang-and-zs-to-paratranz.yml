@@ -40,10 +40,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Close Issue
-        uses: peter-evans/close-issue@v2.0.0
-        with:
-          comment: |
-            このテンプレートは内部専用であるため、自動的にクローズされました。
+        run: gh issue close "${ISSUE_URL}" --comment "このテンプレートは内部専用であるため、自動的にクローズされました。"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_URL: ${{ github.event.issue.html_url }}
 
   lang-and-zs-to-paratranz:
     name: Lang And Zs To Paratranz
@@ -70,9 +70,8 @@ jobs:
       - name: Run Script
         run: >-
           poetry run python main.py action lang-and-zs-to-paratranz
-          --modpack-path='.temp/modpack'
       - name: Close Issue
-        uses: peter-evans/close-issue@v2.0.0
-        with:
-          comment: |
-            Paratranzに自動的に同期されました。
+        run: gh issue close "${ISSUE_URL}" --comment "Paratranzに自動的に同期されました。"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_URL: ${{ github.event.issue.html_url }}

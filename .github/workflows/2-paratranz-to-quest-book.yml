@@ -40,10 +40,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Close Issue
-        uses: peter-evans/close-issue@v2.0.0
-        with:
-          comment: |
-            このテンプレートは内部専用であるため、自動的にクローズされました。
+        run: gh issue close "${ISSUE_URL}" --comment "このテンプレートは内部専用であるため、自動的にクローズされました。"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_URL: ${{ github.event.issue.html_url }}
 
   paratranz-to-quest-book:
     name: Paratranz To Quest Book

@@ -40,10 +40,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Close Issue
-        uses: peter-evans/close-issue@v2.0.0
-        with:
-          comment: |
-            このテンプレートは内部専用であるため、自動的にクローズされました。
+        run: gh issue close "${ISSUE_URL}" --comment "このテンプレートは内部専用であるため、自動的にクローズされました。"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_URL: ${{ github.event.issue.html_url }}
 
   quest-book-to-paratranz:
     name: Quest Book To Paratranz
@@ -62,8 +62,13 @@ jobs:
         run: >-
           poetry run python main.py action quest-book-to-paratranz
           --commit-sha='${{ needs.check-and-parse-issue.outputs.commit-sha }}'
+      - name: Test
+        run: echo "${HOGE}"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          HOGE: ${{ toJson(github.event.issue) }}
       - name: Close Issue
-        uses: peter-evans/close-issue@v2.0.0
-        with:
-          comment: |
-            Paratranzに自動的に同期されました。
+        run: gh issue close "${ISSUE_URL}" --comment "Paratranzに自動的に同期されました。"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_URL: ${{ github.event.issue.html_url }}
