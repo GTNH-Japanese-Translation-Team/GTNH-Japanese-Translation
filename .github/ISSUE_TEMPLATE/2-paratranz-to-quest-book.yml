@@ -1,0 +1,13 @@
+---
+name: ParaTranzのデータを使用してクエストの言語ファイルを生成する
+description: ParaTranzのデータを使用してクエストの言語ファイルを生成し、更新用のPRを作成する (内部専用)
+
+labels: [ '自動化:paratranz→questbook' ]
+
+body:
+  - type: input
+    id: branch
+    attributes:
+      label: ブランチを指定
+    validations:
+      required: true

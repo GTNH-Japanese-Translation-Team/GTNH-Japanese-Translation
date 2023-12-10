@@ -1,0 +1,13 @@
+---
+name: GregTech.langを解析しParaTranzに反映させる
+description: GregTech.langを解析しParaTranzに反映させる (内部専用)
+
+labels: [ '自動化:gt-lang→paratranz' ]
+
+body:
+  - type: input
+    id: gt-lang-url
+    attributes:
+      label: GregTech.langのurl
+    validations:
+      required: true

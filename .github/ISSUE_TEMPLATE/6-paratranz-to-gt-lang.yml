@@ -1,0 +1,13 @@
+---
+name: ParaTranzのデータを使用してGregTech.langを生成する
+description: ParaTranzのデータを使用してGregTech.langを生成し、更新用のPRを作成する (内部専用)
+
+labels: [ '自動化:paratranz→gt-lang' ]
+
+body:
+  - type: input
+    id: branch
+    attributes:
+      label: ブランチを指定
+    validations:
+      required: true

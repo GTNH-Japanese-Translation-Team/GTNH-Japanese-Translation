@@ -1,0 +1,13 @@
+---
+name: ParaTranzのデータを使用してmodの言語ファイルとスクリプトを生成する
+description: ParaTranzのデータを使用してmodの言語ファイルとスクリプトを生成し、更新用のPRを作成する (内部専用)
+
+labels: [ '自動化:paratranz→lang+zs' ]
+
+body:
+  - type: input
+    id: branch
+    attributes:
+      label: ブランチを指定
+    validations:
+      required: true

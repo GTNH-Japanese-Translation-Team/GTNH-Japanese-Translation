@@ -1,0 +1,13 @@
+---
+name: modの言語ファイルとスクリプトを解析しParaTranzに反映させる
+description: modの言語ファイルとスクリプトを解析しParaTranzに反映させる (内部専用)
+
+labels: [ '自動化:lang+zs→paratranz' ]
+
+body:
+  - type: input
+    id: modpack-url
+    attributes:
+      label: modpackのURL
+    validations:
+      required: true

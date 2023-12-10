@@ -1,0 +1,15 @@
+---
+name: クエストの言語ファイルを解析しParaTranzに反映させる
+
+description: クエストの言語ファイルを解析しParaTranzに反映させる (内部専用)
+
+labels: [ '自動化:questbook→paratranz' ]
+
+body:
+  - type: input
+    id: commit-sha
+    attributes:
+      label: クエストの言語ファイルのコミットid
+      value: 'master'
+    validations:
+      required: false
