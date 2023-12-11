@@ -24,9 +24,10 @@ jobs:
       - name: Pack
         run: python repo/.github/scripts/pack.py
       - name: Zip
-        uses: edgarrc/action-7z@v1
-        with:
-          args: 7z a -t7z -mx=9 ./assets/${{ github.ref_name }}.7z ./temp/*
+        run: |
+          cd temp
+          zip -r ../assets/${{ github.ref_name }}.zip ./*
+          cd ..
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
@@ -34,4 +35,4 @@ jobs:
           body: |
             使い方はREADMEを参照してください
           files: |
-            ./assets/${{ github.ref_name }}.7z
+            ./assets/${{ github.ref_name }}.zip
