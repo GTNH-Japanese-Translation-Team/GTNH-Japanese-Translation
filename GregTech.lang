@@ -1,7 +1,7 @@
 # Configuration file
 
 enablelangfile {
-    B:UseThisFileAsLanguageFile=false
+    B:UseThisFileAsLanguageFile=true
 }
 
 
@@ -73225,5 +73225,4 @@ languagefile {
     S:tc.research_text.GT_TRANSZINC=[GT] Transformation of metals into zinc
     S:tc.research_text.GT_WOOD_TO_CHARCOAL=[GT] Turning wood into charcoal
 }
-
 
