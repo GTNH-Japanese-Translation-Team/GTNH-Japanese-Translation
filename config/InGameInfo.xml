@@ -24,7 +24,7 @@
             <icon>
                 <str>minecraft:clock</str>
             </icon>
-            <str> Minecraft Year {darkaqua}</str>
+            <str> {darkaqua}</str>
             <add>
                 <round>
                     <div>
@@ -41,30 +41,30 @@
                 </round>
                 <num>1</num>
             </add>
-            <str> {white}Day {darkaqua}</str>
+            <str>{white}マインクラフト年 {darkaqua}</str>
             <modi>
                 <var>day</var>
                 <num>365</num>
             </modi>
-            <str>{white} Time: {gold}{mctime12} </str>
+            <str>{white}日 時刻: {gold}{mctime12} </str>
             <if>
                 <var>daytime</var>
-                <str>{yellow}(day)</str>
-                <str>{gray}(night)</str>
+                <str>{yellow}(日中)</str>
+                <str>{gray}(夜中)</str>
             </if>
         </line>
         <line>
             <icon>
                 <str>HardcoreEnderExpansion:temple_end_portal</str>
             </icon>
-            <str> Dimension: {gold}{dimension} ({dimensionid}) {white}Chunks Loaded: {gold}{loadedchunks}</str>
+            <str> ディメンション: {gold}{dimension} ({dimensionid}) {white}読み込み済みチャンク: {gold}{loadedchunks}</str>
         </line>
         <line>
             <icon>
                 <str>minecraft:sapling</str>
                 <num>4</num>
             </icon>
-            <str> Biome: {darkaqua}{biome} {gold}{localtemperature}{white}°F {gold}</str>
+            <str> バイオーム: {darkaqua}{biome} {gold}</str>
             <round>
                 <div>
                     <sub>
@@ -75,46 +75,53 @@
                 </div>
                 <num>0</num>
             </round>
-            <str>{white}°C {gold}</str>
-            <round>
-                <add>
-                    <div>
-                        <sub>
-                            <var>localtemperature</var>
-                            <num>32</num>
-                        </sub>
-                        <num>1.8</num>
-                    </div>
-                    <num>273.15</num>
-                </add>
-                <num>0</num>
-            </round>
-            <str>{white}K</str>
-            <str> {gold}{humidity}{white}% Humidity</str>
+            <str>{white}°C</str>
+            <str> {white}湿度{gold}{humidity}{white}%</str>
         </line>
         <line>
             <icon>
                 <str>minecraft:skull</str>
                 <num>4</num>
             </icon>
-            <str> Entities: {gold}{entitiesrendered} {white}Rendered / {gold}{entitiestotal} {white}Loaded  </str>
+            <str> エンティティ: {gold}{entitiesrendered} {white}描画中 / {gold}{entitiestotal} {white}読み込み済み</str>
         </line>
         <line>
             <icon>
                 <str>minecraft:compass</str>
                 <num>0</num>
             </icon>
-            <str> Chunk X: {gold}{chunkx} {white}Z: {gold}{chunkz} {white}Off: {gold}{chunkoffsetx} {white}: {gold}{chunkoffsetz} {white}Y: {gold}{yfeeti} {white}Facing {gold}{finedirection}</str>
+            <str> チャンク X: {gold}{chunkx} {white}Z: {gold}{chunkz} {white}Off: {gold}{chunkoffsetx} {white}: {gold}{chunkoffsetz} {white}Y: {gold}{yfeeti} </str>
+            <op>
+                <str>eq</str>
+                <var>finedirection</var>
+                <str>North</str>
+                <str>North East</str>
+                <str>East</str>
+                <str>South East</str>
+                <str>South</str>
+                <str>South West</str>
+                <str>West</str>
+                <str>North West</str>
+                <str>北</str>
+                <str>北東</str>
+                <str>東</str>
+                <str>南東</str>
+                <str>南</str>
+                <str>南西</str>
+                <str>西</str>
+                <str>北西</str>
+            </op>
+            <str>{white}を向いている</str>
             <if>
                 <var>slimechunk</var>
-                <str> {gold}SlimeChunk{white}</str>
+                <str> {gold}スライムチャンク{white}</str>
             </if>
         </line>
         <line>
             <icon>
                 <str>minecraft:torch</str>
             </icon>
-            <str> Light: </str>
+            <str> 明るさ: </str>
             <max>
                 <var>light</var>
                 <num>7.5</num>
@@ -122,7 +129,7 @@
                 <str>{red}</str>
             </max>
             <var>light</var>
-            <str> {white}(Feet: </str>
+            <str> {white}(足元: </str>
             <max>
                 <var>lightfeet</var>
                 <num>7.5</num>
@@ -138,15 +145,20 @@
         <line>
             <if>
                 <var>snowing</var>
-                <str>  It is {darkgreen}{underline}Snowing{reset}</str>
+                <str>  {darkgreen}{underline}雪{reset}が降っている</str>
             </if>
             <if>
-                <var>raining</var>
-                <str>  It is {darkgreen}{underline}Raining{reset}</str>
+                <and>
+                    <var>raining</var>
+                    <not>
+                        <var>thundering</var>
+                    </not>
+                </and>
+                <str>  {darkgreen}{underline}雨{reset}が降っている</str>
             </if>
             <if>
                 <var>thundering</var>
-                <str> and {darkgreen}{underline}Thundering{reset}.</str>
+                <str>  {darkgreen}{underline}雷を伴った雨{reset}が降っている</str>
             </if>
         </line>
         <line>
@@ -201,7 +213,7 @@
                             <num>16</num>
                             <num>16</num>
                         </icon>
-                        <str>  This is an {darkgreen}{underline}ore{white} chunk.</str>
+                        <str>  ここは{darkgreen}{underline}鉱脈{white}のあるチャンク</str>
                     </concat>
                 </if>
             </if>
@@ -253,7 +265,7 @@
                             <num>16</num>
                             <num>16</num>
                         </icon>
-                        <str>  This is an {darkgreen}{underline}ore{white} chunk.</str>
+                        <str>  ここは{darkgreen}{underline}鉱脈{white}のあるチャンク</str>
                     </concat>
                 </if>
             </if>
@@ -308,7 +320,7 @@
                         </and>
                         <str>      </str>
                     </if>
-                    <str>  You are at the {darkred}center {white}of the chunk.</str>
+                    <str>  チャンクの{darkred}中央{white}</str>
                 </concat>
             </if>
         </line>
@@ -317,7 +329,7 @@
         </line>
         <line>
             <if>
-                <str>  Nearest players:</str>
+                <str>  近くのプレイヤー:</str>
             </if>
         </line>
         <line>
