@@ -1,4 +1,4 @@
-name: Gt Lang To ParaTranz
+name: GT Lang To ParaTranz
 
 on:
   issues:
@@ -46,7 +46,7 @@ jobs:
           ISSUE_URL: ${{ github.event.issue.html_url }}
 
   gt-lang-to-paratranz:
-    name: Gt Lang To ParaTranz
+    name: GT Lang To ParaTranz
     needs: check-and-parse-issue
     if: ${{ needs.check-and-parse-issue.outputs.passed == 'true' }}
     runs-on: ubuntu-latest
