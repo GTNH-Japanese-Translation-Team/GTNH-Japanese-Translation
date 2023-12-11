@@ -1,4 +1,4 @@
-name: Lang And Zs To ParaTranz
+name: Lang And zs To ParaTranz
 
 on:
   issues:
@@ -46,7 +46,7 @@ jobs:
           ISSUE_URL: ${{ github.event.issue.html_url }}
 
   lang-and-zs-to-paratranz:
-    name: Lang And Zs To ParaTranz
+    name: Lang And zs To ParaTranz
     needs: check-and-parse-issue
     if: ${{ needs.check-and-parse-issue.outputs.passed == 'true' }}
     runs-on: ubuntu-latest
