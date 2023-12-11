@@ -75,7 +75,7 @@ jobs:
           labels: |
             自動化:paratranz→lang+zs
           body: |
-            - #${{ github.event.issue.number }}によってトリガーされました
+            #${{ github.event.issue.number }} によってトリガーされました
           base: ${{ needs.check-and-parse-issue.outputs.branch }}
           branch: automation/compare/${{ github.event.issue.number }}
           path: '.repo'
