@@ -1,4 +1,4 @@
-name: Lang And Zs To Paratranz
+name: Lang And Zs To ParaTranz
 
 on:
   issues:
@@ -46,7 +46,7 @@ jobs:
           ISSUE_URL: ${{ github.event.issue.html_url }}
 
   lang-and-zs-to-paratranz:
-    name: Lang And Zs To Paratranz
+    name: Lang And Zs To ParaTranz
     needs: check-and-parse-issue
     if: ${{ needs.check-and-parse-issue.outputs.passed == 'true' }}
     runs-on: ubuntu-latest
@@ -72,7 +72,7 @@ jobs:
           poetry run python main.py action lang-and-zs-to-paratranz
           --modpack-path='.temp/modpack'
       - name: Close Issue
-        run: gh issue close "${ISSUE_URL}" --comment "Paratranzに自動的に同期されました。"
+        run: gh issue close "${ISSUE_URL}" --comment "ParaTranzに自動的に同期されました。"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE_URL: ${{ github.event.issue.html_url }}

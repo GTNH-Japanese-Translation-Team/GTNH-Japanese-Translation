@@ -24,4 +24,4 @@
 
 ## 貢献方法
 
-[Paratranz](https://paratranz.cn/projects/8922)で翻訳作業を行っています。どなたでも歓迎です！
+[ParaTranz](https://paratranz.cn/projects/8922)で翻訳作業を行っています。どなたでも歓迎です！

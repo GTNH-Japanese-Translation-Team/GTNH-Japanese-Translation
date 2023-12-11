@@ -1,4 +1,4 @@
-name: Paratranz To Quest Book
+name: ParaTranz To Quest Book
 
 on:
   issues:
@@ -46,7 +46,7 @@ jobs:
           ISSUE_URL: ${{ github.event.issue.html_url }}
 
   paratranz-to-quest-book:
-    name: Paratranz To Quest Book
+    name: ParaTranz To Quest Book
     needs: check-and-parse-issue
     if: ${{ needs.check-and-parse-issue.outputs.passed == 'true' }}
     runs-on: ubuntu-latest

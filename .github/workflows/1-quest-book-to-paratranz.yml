@@ -1,4 +1,4 @@
-name: Quest Book To Paratranz
+name: Quest Book To ParaTranz
 
 on:
   issues:
@@ -46,7 +46,7 @@ jobs:
           ISSUE_URL: ${{ github.event.issue.html_url }}
 
   quest-book-to-paratranz:
-    name: Quest Book To Paratranz
+    name: Quest Book To ParaTranz
     needs: check-and-parse-issue
     if: ${{ needs.check-and-parse-issue.outputs.passed == 'true' }}
     runs-on: ubuntu-latest
@@ -68,7 +68,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           HOGE: ${{ toJson(github.event.issue) }}
       - name: Close Issue
-        run: gh issue close "${ISSUE_URL}" --comment "Paratranzに自動的に同期されました。"
+        run: gh issue close "${ISSUE_URL}" --comment "ParaTranzに自動的に同期されました。"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE_URL: ${{ github.event.issue.html_url }}
