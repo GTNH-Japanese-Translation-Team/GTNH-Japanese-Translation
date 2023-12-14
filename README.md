@@ -28,3 +28,22 @@ Nightly Buildの運用開始
 ## 貢献方法
 
 [ParaTranz](https://paratranz.cn/projects/8922)で翻訳作業を行っています。どなたでも歓迎です！
+
+## 翻訳メンバー
+
+[miozune](https://github.com/miozune)  
+[Chlorine](https://github.com/Chlorine0808)  
+[rela-layla](https://github.com/rela-layla)  
+[Nana Shiina](https://github.com/c7na)  
+[tatuto6](https://github.com/tatuto6)  
+[Genzo](https://github.com/viekun)  
+[Epitap](https://github.com/MCMEpitap)  
+[PineJam](https://github.com/PineJamX)  
+[Saxgumi](https://github.com/saxgumi)  
+[mamePi](https://github.com/Coffee-beans-Pi)  
+[PumpkinMelon4](https://github.com/PumpkinMelon4)  
+[ButterChild](https://github.com/ButterChild)  
+[soushi53](https://github.com/soushi53)  
+[maimo](https://github.com/MaimoCh)  
+[inaka-yuk](https://github.com/inaka-yuk)  
+[Ko_no](https://github.com/MrKono)  
