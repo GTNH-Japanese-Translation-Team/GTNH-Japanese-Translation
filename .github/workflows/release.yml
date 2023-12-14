@@ -33,6 +33,6 @@ jobs:
         with:
           name: ${{ github.ref_name }}
           body: |
-            使い方はREADMEを参照してください
+            使い方はREADMEを参照してください。
           files: |
             ./assets/${{ github.ref_name }}.zip

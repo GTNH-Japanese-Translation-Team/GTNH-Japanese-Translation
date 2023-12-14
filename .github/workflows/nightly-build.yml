@@ -77,7 +77,7 @@ jobs:
           tag_name: latest
           name: Latest
           body: |
-            お使いのバージョンと合わない可能性があります
+            使い方はREADMEを参照してください。
           files: |
             ./assets/GTNH-Japanese-Translation-Nightly-${{ steps.date.outputs.today }}.zip
           token: ${{ secrets.GITHUB_TOKEN }}
