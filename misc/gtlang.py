@@ -293,6 +293,7 @@ def main():
                 'key': s_key,
                 'original': value,
                 'translation': formula,
+                'stage': 5,
                 'context': s_key + '=' + value,
             })
             found_material = False
@@ -308,6 +309,7 @@ def main():
                 'key': s_key,
                 'original': value,
                 'translation': to_replace[value],
+                'stage': 5,
                 'context': s_key + '=' + value,
             })
             found_material = True
