@@ -8,6 +8,7 @@ on:
 env:
   PARATRANZ_TOKEN: ${{ secrets.PARATRANZ_TOKEN }}
   PARATRANZ_PROJECT_ID: ${{ secrets.PARATRANZ_PROJECT_ID }}
+  TARGET_LANG: ja_JP
 
 jobs:
   nightly-build:
