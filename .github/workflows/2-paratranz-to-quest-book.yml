@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: miozune/GTNH-translation-compare
-          ref: rework
+          ref: main
       - name: Ensure Dependencies
         uses: ./.github/actions/ensure-dependencies
       - name: Run Script
@@ -55,7 +55,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: miozune/GTNH-translation-compare
-          ref: rework
+          ref: main
       - name: Ensure Dependencies
         uses: ./.github/actions/ensure-dependencies
       - name: Checkout Work Repo
@@ -68,6 +68,7 @@ jobs:
           poetry run python main.py action paratranz-to-quest-book
           --repo-path='.repo'
           --issue='${{ github.event.issue.number }}'
+          --commit-message='[自動化] クエストを更新'
       - name: Create PR
         uses: peter-evans/create-pull-request@v4.0.0
         with:

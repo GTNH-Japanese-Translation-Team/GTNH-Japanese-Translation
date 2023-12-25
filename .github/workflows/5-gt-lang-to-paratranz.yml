@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: miozune/GTNH-translation-compare
-          ref: rework
+          ref: main
       - name: Ensure Dependencies
         uses: ./.github/actions/ensure-dependencies
       - name: Run Script
@@ -55,7 +55,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: miozune/GTNH-translation-compare
-          ref: rework
+          ref: main
       - name: Ensure Dependencies
         uses: ./.github/actions/ensure-dependencies
       - name: Run Script
