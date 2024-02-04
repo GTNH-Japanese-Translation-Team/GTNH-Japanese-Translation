@@ -47,3 +47,6 @@ Nightly Buildの運用開始
 [maimo](https://github.com/MaimoCh)  
 [inaka-yuk](https://github.com/inaka-yuk)  
 [Ko_no](https://github.com/MrKono)  
+[redcarrot9984](https://github.com/redcarrot9984)  
+[WINDOWS2000-dll](https://github.com/WINDOWS2000-dll)  
+[furirinest](https://github.com/furirinest)  
