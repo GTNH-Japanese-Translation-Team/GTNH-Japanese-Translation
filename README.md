@@ -2,9 +2,9 @@
 
 ## GT New Horizonsの日本語化パック
 
-2023/12/12
+2024/02/18
 
-Nightly Buildの運用開始
+Better Line Breakを追加
 
 ## 使い方
 
@@ -16,6 +16,10 @@ Nightly Buildの運用開始
 ## Nightly Build
 
 毎日最新の翻訳を[Latest版](https://github.com/miozune/GTNH-Japanese-Translation/releases/tag/latest)として自動リリースしています。
+
+## BetterLineBreak
+
+KatatsumuriPanによる[Better Line Break](https://modrinth.com/mod/better-line-break)をGNU Lesser General Public License v2.1のもと同梱しています。
 
 ## クレジット
 
