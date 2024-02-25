@@ -33,7 +33,7 @@ KatatsumuriPanによる[Better Line Break](https://modrinth.com/mod/better-line-
 
 [ParaTranz](https://paratranz.cn/projects/8922)で翻訳作業を行っています。どなたでも歓迎です！
 
-## 翻訳メンバー
+## 翻訳メンバー (参加順)
 
 [miozune](https://github.com/miozune)  
 [Chlorine](https://github.com/Chlorine0808)  
@@ -54,3 +54,4 @@ KatatsumuriPanによる[Better Line Break](https://modrinth.com/mod/better-line-
 [redcarrot9984](https://github.com/redcarrot9984)  
 [WINDOWS2000-dll](https://github.com/WINDOWS2000-dll)  
 [furirinest](https://github.com/furirinest)  
+[heibako](https://github.com/heibako)  
